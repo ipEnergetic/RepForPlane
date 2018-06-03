@@ -1,10 +1,9 @@
 package by.softclub.by;
 
 public class Line {
+    private double x, y; // coordinates of Intersection lines
     private double x1, x2, y1, y2, k, b;
-
-    Line() {
-    }
+    Point pointOfIntersectionLines; // point of Intersection lines
 
     Line(Point point1, Point point2) {
         this.x1 = point1.getX1();
@@ -16,7 +15,17 @@ public class Line {
         System.out.println("Created LINE with view: " + k + "x + " + b + " = y");
     }
 
-    void findK() {
+    Line(Segment segment) {
+        this.x1 = segment.getX1();
+        this.y1 = segment.getY1();
+        this.x2 = segment.getX2();
+        this.y2 = segment.getY2();
+        findK();
+        findB();
+        System.out.println("Created LINE with view: " + k + "x + " + b + " = y");
+    }
+
+    public void findK() {
         double koefA, koefB;
         koefA = y1 - y2;
         koefB = x2 - x1;
@@ -26,7 +35,7 @@ public class Line {
             k = koefA / koefB;
     }
 
-    void findB() {
+    public void findB() {
         double koefB, koefC;
         koefB = x2 - x1;
         koefC = x1 * y2 - x2 * y1;
@@ -38,10 +47,38 @@ public class Line {
             b = koefC / koefB;
     }
 
-    void isParalleLine(Line line) {
+    public void pointOfIntersectionLines(Line line) {
+        this.x = ((line.b - this.b) / (this.k - line.k));
+        this.y = line.k * x + line.b;
+        pointOfIntersectionLines = new Point(x, y);
+        System.out.println("Point of Intersection Lines is X: " + x + " Y " + y);
+    }
+
+
+    public void isParalleLine(Line line) {
         if (this.k == line.k)
             System.out.println("Lines are PARALLEL");
         else
             System.out.println("Lines are NOT PARALLEL");
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public double getK() {
+        return k;
+    }
+
+    public double getB() {
+        return b;
+    }
+    
+    public Point getPointIntersectionLines() {
+        return pointOfIntersectionLines;
     }
 }
