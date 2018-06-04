@@ -2,7 +2,7 @@ package by.softclub.by;
 
 public class Segment {
     private double x1, x2, y1, y2;
-    Point pointOneSeg, pointTwoSeg;
+    private Point pointOneSeg, pointTwoSeg;
     Point pointOfGeneralStartSegments;
     Point pointOfIntersectionSegments;
     private double lengthOfSegment;
@@ -77,9 +77,17 @@ public class Segment {
     public double getY2() {
         return y2;
     }
-    
+
     public Point getPointOfGeneralStartSegments() {
         return pointOfGeneralStartSegments;
+    }
+
+    public Point getPointOneSeg() {
+        return pointOneSeg;
+    }
+
+    public Point getPointTwoSeg() {
+        return pointTwoSeg;
     }
 
 }
