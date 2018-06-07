@@ -1,9 +1,11 @@
 package railwaystation.dispatcher;
 
+import railwaystation.dispatcher.deliver.OrderDelivery;
+
 public class Dispatcher {
-    DeliveryOrder orderForTransportation;
+    OrderDelivery orderForTransportation;
 
     public void makeOrderForTransportation() {
-        orderForTransportation = new DeliveryOrder();
+
     }
 }

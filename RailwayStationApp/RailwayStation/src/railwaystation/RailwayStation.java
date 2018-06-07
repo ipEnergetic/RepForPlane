@@ -5,15 +5,15 @@ import java.util.ArrayList;
 
 import railwaystation.blocktrains.BlockTrain;
 
-import railwaystation.locomotives.electrolocomotives.ElectroLoco;
-import railwaystation.locomotives.diesellokomotives.DieselLoco;
+import railwaystation.locomotives.electro.ElectroLoco;
+import railwaystation.locomotives.diesel.DieselLoco;
 
 import railwaystation.wagons.Wagon;
-import railwaystation.wagons.freightwagons.constructionandindustrialmaterialswagom.loosematerialswagon.HopperWagon;
+import railwaystation.wagons.commodity.HopperIndustrial;
 
-import railwaystation.wagons.passengerwagons.buisnesswagons.BuisnessWagon;
+import railwaystation.wagons.passenger.Buisness;
 
-import railwaystation.dispatcher.DeliveryOrder;
+import railwaystation.dispatcher.deliver.OrderDelivery;
 
 
 public class RailwayStation {
@@ -21,11 +21,7 @@ public class RailwayStation {
     ArrayList<DieselLoco> listDieselLoco;
     ArrayList<Wagon> listWagons = new ArrayList<Wagon>();
     ArrayList<BlockTrain> listBlockTrains = new ArrayList<BlockTrain>();
-    ArrayList<DeliveryOrder> listOrders;
-
-    public static void main(String[] args) {
-        
-    }
+    ArrayList<OrderDelivery> listOrders;
 
     public void setListElectroLoco(ArrayList<ElectroLoco> listElectroLoco) {
         this.listElectroLoco = listElectroLoco;
@@ -59,11 +55,11 @@ public class RailwayStation {
         return listBlockTrains;
     }
 
-    public void setListOrders(ArrayList<DeliveryOrder> listOrders) {
+    public void setListOrders(ArrayList<OrderDelivery> listOrders) {
         this.listOrders = listOrders;
     }
 
-    public ArrayList<DeliveryOrder> getListOrders() {
+    public ArrayList<OrderDelivery> getListOrders() {
         return listOrders;
     }
 }

@@ -2,7 +2,7 @@ package railwaystation.blocktrains;
 
 import java.util.ArrayList;
 
-import railwaystation.dispatcher.DeliveryOrder;
+import railwaystation.dispatcher.deliver.OrderDelivery;
 
 public class BlockTrain {
     private String typeOfFuel;
@@ -14,7 +14,7 @@ public class BlockTrain {
     private double weightOfBlockTrain;
     private double maxWeightOfBlockTrain;
     ArrayList<BlockTrain> listBlockTrain;
-    ArrayList<DeliveryOrder> listOrderForBlocktrain;
+    ArrayList<OrderDelivery> listOrderForBlocktrain;
 
     public void setTypeOfTransportation(String typeOfTransportation) {
         this.typeOfFuel = typeOfTransportation;
@@ -88,11 +88,11 @@ public class BlockTrain {
         return listBlockTrain;
     }
 
-    public void setListOrderForBlocktrain(ArrayList<DeliveryOrder> listOrderForBlocktrain) {
+    public void setListOrderForBlocktrain(ArrayList<OrderDelivery> listOrderForBlocktrain) {
         this.listOrderForBlocktrain = listOrderForBlocktrain;
     }
 
-    public ArrayList<DeliveryOrder> getListOrderForBlocktrain() {
+    public ArrayList<OrderDelivery> getListOrderForBlocktrain() {
         return listOrderForBlocktrain;
     }
 }

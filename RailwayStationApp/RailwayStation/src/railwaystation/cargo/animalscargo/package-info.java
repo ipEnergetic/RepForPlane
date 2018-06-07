@@ -1,2 +1,0 @@
-package railwaystation.cargo.animalscargo;
-
