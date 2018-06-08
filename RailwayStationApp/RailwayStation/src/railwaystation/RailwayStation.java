@@ -13,7 +13,7 @@ import railwaystation.wagons.commodity.HopperIndustrial;
 
 import railwaystation.wagons.passenger.Buisness;
 
-import railwaystation.dispatcher.deliver.OrderDelivery;
+import railwaystation.administration.OrderDelivery;
 
 
 public class RailwayStation {

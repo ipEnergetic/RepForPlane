@@ -2,7 +2,7 @@ package railwaystation.blocktrains;
 
 import java.util.ArrayList;
 
-import railwaystation.dispatcher.deliver.OrderDelivery;
+import railwaystation.administration.OrderDelivery;
 
 public class BlockTrain {
     private String typeOfFuel;

@@ -1,17 +1,15 @@
 package railwaystation.cargo.industrialcargo;
 
-import railwaystation.administration.direction.interfaces.DeliverWood;
-
 import railwaystation.cargo.Cargo;
 
-public class Wood extends Cargo implements DeliverWood {
+public class Macadam extends Cargo {
 
-    public Wood() {
-        this.setTypeOfCargo("Wood");
+    public Macadam() {
+        this.setTypeOfCargo("Macadam");
         /*
          * Выбираем рандомно количество от 60м3 до 1200м3
          */
         this.setVolumeOfCargo((int)(60 + Math.random() * 1140));
-        this.setWeightOfCargo(this.getVolumeOfCargo() * 700 / 1000);
+        this.setWeightOfCargo(this.getVolumeOfCargo() * 1400/1000);
     }
 }

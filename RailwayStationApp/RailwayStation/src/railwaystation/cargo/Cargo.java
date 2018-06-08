@@ -11,34 +11,12 @@ import railwaystation.cargo.condition.Packed;
 
 public abstract class Cargo {
     private String typeOfCargo;
-    private int countOfCargo;
-    private String conditionOfCargo;
+    private int volumeOfCargo;
+    private int weightOfCargo;
     private boolean isNeedToFreeze = false;
     private boolean isDangerous = false;
 
-    /*
-     * Выясняем параметры груза
-     */
 
-    public void initConditionOfCargo() {
-        if (this instanceof Bulk) {
-            setConditionOfCargo("bulk");
-        } else if (this instanceof Flow) {
-            setConditionOfCargo("flow");
-        } else if (this instanceof Freeze) {
-            setConditionOfCargo("freeze");
-        } else if (this instanceof Gaseus) {
-            setConditionOfCargo("gaseus");
-        } else if (this instanceof Packed) {
-            setConditionOfCargo("packed");
-        }
-        if (this instanceof Freeze) {
-            setIsNeedToFreeze(true);
-        }
-        if (this instanceof Dangerous) {
-            setIsDangerous(true);
-        }
-    }
 
     public void setTypeOfCargo(String typeOfCargo) {
         this.typeOfCargo = typeOfCargo;
@@ -48,20 +26,12 @@ public abstract class Cargo {
         return typeOfCargo;
     }
 
-    public void setCountOfCargo(int countOfCargo) {
-        this.countOfCargo = countOfCargo;
+    public void setVolumeOfCargo(int countOfCargo) {
+        this.volumeOfCargo = countOfCargo;
     }
 
-    public int getCountOfCargo() {
-        return countOfCargo;
-    }
-
-    public void setConditionOfCargo(String conditionOfCargo) {
-        this.conditionOfCargo = conditionOfCargo;
-    }
-
-    public String getConditionOfCargo() {
-        return conditionOfCargo;
+    public int getVolumeOfCargo() {
+        return volumeOfCargo;
     }
 
     public void setIsNeedToFreeze(boolean isNeedToFreeze) {
@@ -78,5 +48,13 @@ public abstract class Cargo {
 
     public boolean isIsDangerous() {
         return isDangerous;
+    }
+
+    public void setWeightOfCargo(int weightOfCargo) {
+        this.weightOfCargo = weightOfCargo;
+    }
+
+    public int getWeightOfCargo() {
+        return weightOfCargo;
     }
 }
