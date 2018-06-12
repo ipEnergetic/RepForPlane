@@ -2,11 +2,11 @@ package railwaystation.cargo.dangerouscargo;
 
 import railwaystation.administration.direction.interfaces.DeliverGasoline;
 
-import railwaystation.cargo.Cargo;
+import railwaystation.cargo.CommodityCargo;
 import railwaystation.cargo.condition.Dangerous;
 import railwaystation.cargo.condition.Flow;
 
-public class Gasoline extends Cargo implements Flow, Dangerous, DeliverGasoline {
+public class Gasoline extends CommodityCargo implements Flow, Dangerous, DeliverGasoline {
 
     public Gasoline() {
         this.setTypeOfCargo("Gasoline");

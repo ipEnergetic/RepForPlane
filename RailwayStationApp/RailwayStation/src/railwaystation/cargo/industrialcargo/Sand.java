@@ -1,8 +1,10 @@
 package railwaystation.cargo.industrialcargo;
 
-import railwaystation.cargo.Cargo;
+import railwaystation.cargo.CommodityCargo;
+import railwaystation.cargo.condition.Bulk;
+import railwaystation.cargo.condition.IndustrialCargo;
 
-public class Sand extends Cargo{
+public class Sand extends CommodityCargo implements Bulk, IndustrialCargo{
     
     public Sand() {
         this.setTypeOfCargo("Sand");

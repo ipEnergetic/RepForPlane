@@ -1,8 +1,10 @@
 package railwaystation.cargo.industrialcargo;
 
-import railwaystation.cargo.Cargo;
+import railwaystation.cargo.CommodityCargo;
+import railwaystation.cargo.condition.Bulk;
+import railwaystation.cargo.condition.IndustrialCargo;
 
-public class Macadam extends Cargo {
+public class Macadam extends CommodityCargo implements Bulk, IndustrialCargo{
 
     public Macadam() {
         this.setTypeOfCargo("Macadam");

@@ -1,7 +1,7 @@
 package railwaystation.cargo;
 
 
-public class Passenger {
+public class Passenger extends Cargo{
     private int age;
     private String sex;
 

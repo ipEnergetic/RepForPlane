@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import railwaystation.administration.direction.Direction;
 
-import railwaystation.cargo.Cargo;
+import railwaystation.cargo.CommodityCargo;
 import railwaystation.cargo.Passenger;
 import railwaystation.cargo.passengers.BuisnesPass;
 
@@ -37,7 +37,7 @@ public class PassengerManager extends Manager {
         }
     }
 
-    @Override
+
     public void genDirection() {
         int randDirection = (int)(Math.random() * Direction.listDirections.size());
         directionOfDelivery = Direction.listDirections.get(randDirection);

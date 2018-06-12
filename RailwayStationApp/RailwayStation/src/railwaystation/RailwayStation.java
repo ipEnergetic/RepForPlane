@@ -1,19 +1,10 @@
 package railwaystation;
 
-import java.util.AbstractList;
 import java.util.ArrayList;
-
-import railwaystation.blocktrains.BlockTrain;
-
-import railwaystation.locomotives.electro.ElectroLoco;
-import railwaystation.locomotives.diesel.DieselLoco;
-
-import railwaystation.wagons.Wagon;
-import railwaystation.wagons.commodity.HopperIndustrial;
-
-import railwaystation.wagons.passenger.Buisness;
-
-import railwaystation.administration.OrderDelivery;
+import railwaystation.drivingplatforms.blocktrains.BlockTrain;
+import railwaystation.drivingplatforms.locomotives.electro.ElectroLoco;
+import railwaystation.drivingplatforms.locomotives.diesel.DieselLoco;
+import railwaystation.drivingplatforms.wagons.Wagon;
 
 
 public class RailwayStation {
@@ -21,7 +12,6 @@ public class RailwayStation {
     ArrayList<DieselLoco> listDieselLoco;
     ArrayList<Wagon> listWagons = new ArrayList<Wagon>();
     ArrayList<BlockTrain> listBlockTrains = new ArrayList<BlockTrain>();
-    ArrayList<OrderDelivery> listOrders;
 
     public void setListElectroLoco(ArrayList<ElectroLoco> listElectroLoco) {
         this.listElectroLoco = listElectroLoco;
@@ -53,13 +43,5 @@ public class RailwayStation {
 
     public ArrayList<BlockTrain> getListBlockTrains() {
         return listBlockTrains;
-    }
-
-    public void setListOrders(ArrayList<OrderDelivery> listOrders) {
-        this.listOrders = listOrders;
-    }
-
-    public ArrayList<OrderDelivery> getListOrders() {
-        return listOrders;
     }
 }

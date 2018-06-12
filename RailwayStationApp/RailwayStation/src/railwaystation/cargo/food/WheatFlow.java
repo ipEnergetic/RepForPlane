@@ -1,9 +1,10 @@
 package railwaystation.cargo.food;
 
-import railwaystation.cargo.Cargo;
+import railwaystation.cargo.CommodityCargo;
 import railwaystation.cargo.condition.Flow;
+import railwaystation.cargo.condition.Food;
 
-public class WheatFlow extends Cargo implements Flow{
+public class WheatFlow extends CommodityCargo implements Food, Flow{
 
     public WheatFlow() {
         this.setTypeOfCargo("Wheat");

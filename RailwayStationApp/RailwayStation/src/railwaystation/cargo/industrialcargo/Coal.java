@@ -1,9 +1,11 @@
 package railwaystation.cargo.industrialcargo;
 
-import railwaystation.cargo.Cargo;
+import railwaystation.cargo.CommodityCargo;
+import railwaystation.cargo.condition.Bulk;
+import railwaystation.cargo.condition.IndustrialCargo;
 import railwaystation.cargo.dangerouscargo.Gas;
 
-public class Coal extends Cargo {
+public class Coal extends CommodityCargo implements Bulk, IndustrialCargo{
 
     public Coal() {
         this.setTypeOfCargo("Coal");

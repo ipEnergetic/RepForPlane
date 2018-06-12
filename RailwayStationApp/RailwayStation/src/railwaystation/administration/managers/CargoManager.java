@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-import railwaystation.cargo.Cargo;
+import railwaystation.cargo.CommodityCargo;
 import railwaystation.cargo.Passenger;
 import railwaystation.cargo.dangerouscargo.Ammonia;
 import railwaystation.cargo.dangerouscargo.Gas;
@@ -22,12 +22,21 @@ import railwaystation.administration.direction.Direction;
 
 
 public class CargoManager extends Manager {
-    private ArrayList<Cargo> listCargo;
+    private ArrayList<CommodityCargo> listCargo;
     private Direction directionOfDelivery;
+    private int totalWeightCargo;
+    
+    public CargoManager(){
+        genTypeCargo();
+        genDelivery();
+        for (int i = 0; i < listCargo.size(); i++) {
+            totalWeightCargo = totalWeightCargo + listCargo.get(i).getWeightOfCargo();
+        }
+    }
 
 
     public void genTypeCargo() {
-        listCargo = new ArrayList<Cargo>();
+        listCargo = new ArrayList<CommodityCargo>();
         Set setRepeat = new HashSet();
         int randCountTypeCargo = (int)(4 + Math.random() * 3);
         for (int i = 0; i < randCountTypeCargo; i++) {
@@ -77,7 +86,7 @@ public class CargoManager extends Manager {
 
     public void genDirection() {
         int randDirection = (int)(Math.random() * Direction.listDirections.size());
-        directionOfDelivery = Direction.listDirections.get(randDirection);
+        setDirectionOfDelivery(Direction.listDirections.get(randDirection));
     }
 
     public void printListCargo() {
@@ -93,8 +102,9 @@ public class CargoManager extends Manager {
     public void printDirectionOfDelivery() {
         System.out.println(String.format("|%18s|%22s|%25s|", "City of delivery", "Distance of delivery",
                                          "Is direction electricity"));
-        System.out.println(String.format("|%18s|%19s km|%25s|", directionOfDelivery.getCityOfDilivery(),
-                                         directionOfDelivery.getDistance(), directionOfDelivery.isIsElectricity()));
+        System.out.println(String.format("|%18s|%19s km|%25s|", getDirectionOfDelivery().getCityOfDilivery(),
+                                         getDirectionOfDelivery().getDistance(),
+                                         getDirectionOfDelivery().isIsElectricity()));
     }
 
     public void genDelivery() {
@@ -106,6 +116,15 @@ public class CargoManager extends Manager {
         printDirectionOfDelivery();
         System.out.println();
         printListCargo();
+        System.out.println();
+    }
+
+    public void setListCargo(ArrayList<CommodityCargo> listCargo) {
+        this.listCargo = listCargo;
+    }
+
+    public ArrayList<CommodityCargo> getListCargo() {
+        return listCargo;
     }
 }
 

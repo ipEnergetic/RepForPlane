@@ -2,10 +2,11 @@ package railwaystation.cargo.food;
 
 import railwaystation.administration.direction.interfaces.DeliverFood;
 
-import railwaystation.cargo.Cargo;
+import railwaystation.cargo.CommodityCargo;
+import railwaystation.cargo.condition.Food;
 import railwaystation.cargo.condition.Packed;
 
-public class Meat extends Cargo implements Packed, DeliverFood{
+public class Meat extends CommodityCargo implements Packed, Food{
 
     public Meat() {
         this.setTypeOfCargo("Meat");

@@ -2,12 +2,12 @@ package railwaystation.cargo.dangerouscargo;
 
 import railwaystation.administration.direction.interfaces.DeliverAmmonia;
 
-import railwaystation.cargo.Cargo;
+import railwaystation.cargo.CommodityCargo;
 import railwaystation.cargo.condition.Dangerous;
 import railwaystation.cargo.condition.Gaseus;
 
 
-public class Ammonia extends Cargo implements Gaseus, Dangerous, DeliverAmmonia{
+public class Ammonia extends CommodityCargo implements Gaseus, Dangerous, DeliverAmmonia{
 
     public Ammonia() {
         this.setTypeOfCargo("Ammonia");

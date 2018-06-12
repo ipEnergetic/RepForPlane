@@ -2,9 +2,10 @@ package railwaystation.cargo.industrialcargo;
 
 import railwaystation.administration.direction.interfaces.DeliverWood;
 
-import railwaystation.cargo.Cargo;
+import railwaystation.cargo.CommodityCargo;
+import railwaystation.cargo.condition.IndustrialCargo;
 
-public class Wood extends Cargo implements DeliverWood {
+public class Wood extends CommodityCargo implements IndustrialCargo {
 
     public Wood() {
         this.setTypeOfCargo("Wood");

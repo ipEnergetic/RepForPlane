@@ -19,7 +19,7 @@ public class Direction { //Направление
         listDirections.add(new ElectricityDirection("Vitebsk", 290, true));
         listDirections.add(new DieselDirection("Mogilev", 198, false));
         listDirections.add(new ElectricityDirection("Gomel", 313, true));
-        listDirections.add(new ElectricityDirection("Moskov", 675, true));
+        listDirections.add(new ElectricityDirection("Moskow", 675, true));
         listDirections.add(new DieselDirection("Pinsk", 133, false));
         listDirections.add(new ElectricityDirection("Molodechno", 65, true));
         listDirections.add(new ElectricityDirection("Orsha", 197, true));

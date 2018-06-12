@@ -4,20 +4,17 @@ import java.util.ArrayList;
 
 import railwaystation.administration.direction.Direction;
 
-import railwaystation.cargo.Cargo;
+import railwaystation.cargo.CommodityCargo;
 
 public abstract class Manager {
-    private ArrayList<Cargo> listCargo = new ArrayList<Cargo>();
+    private ArrayList<CommodityCargo> listCargo = new ArrayList<CommodityCargo>();
     private Direction directionOfDelivery;
 
-    public abstract void genDirection();
-
-
-    public void setListCargo(ArrayList<Cargo> listCargo) {
+    public void setListCargo(ArrayList<CommodityCargo> listCargo) {
         this.listCargo = listCargo;
     }
 
-    public ArrayList<Cargo> getListCargo() {
+    public ArrayList<CommodityCargo> getListCargo() {
         return listCargo;
     }
 
