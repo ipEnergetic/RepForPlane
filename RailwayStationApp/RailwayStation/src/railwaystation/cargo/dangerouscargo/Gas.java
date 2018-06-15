@@ -3,8 +3,8 @@ package railwaystation.cargo.dangerouscargo;
 import railwaystation.administration.direction.interfaces.DeliverGas;
 
 import railwaystation.cargo.CommodityCargo;
-import railwaystation.cargo.condition.Dangerous;
-import railwaystation.cargo.condition.Gaseus;
+import railwaystation.cargo.interfacescondition.Dangerous;
+import railwaystation.cargo.interfacescondition.Gaseus;
 
 public class Gas extends CommodityCargo implements Gaseus, Dangerous, DeliverGas{
 

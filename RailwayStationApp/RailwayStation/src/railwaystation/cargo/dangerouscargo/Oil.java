@@ -3,8 +3,8 @@ package railwaystation.cargo.dangerouscargo;
 import railwaystation.administration.direction.interfaces.DeliverOil;
 
 import railwaystation.cargo.CommodityCargo;
-import railwaystation.cargo.condition.Dangerous;
-import railwaystation.cargo.condition.Flow;
+import railwaystation.cargo.interfacescondition.Dangerous;
+import railwaystation.cargo.interfacescondition.Flow;
 
 public class Oil extends CommodityCargo implements Flow, DeliverOil, Dangerous {
 

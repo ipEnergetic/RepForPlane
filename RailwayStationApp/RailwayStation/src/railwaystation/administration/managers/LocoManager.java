@@ -13,7 +13,7 @@ import railwaystation.drivingplatforms.locomotives.electro.LocoEl5000;
 import railwaystation.drivingplatforms.locomotives.electro.LocoEl7000;
 import railwaystation.drivingplatforms.wagons.GroupOfWagons;
 
-public class LocoManager extends Manager {
+public class LocoManager extends Manager{
     ArrayList<Loco> listLoco = new ArrayList<Loco>();
 
 

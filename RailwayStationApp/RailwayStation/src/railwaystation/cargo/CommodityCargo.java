@@ -2,12 +2,12 @@ package railwaystation.cargo;
 
 import java.util.ArrayList;
 
-import railwaystation.cargo.condition.Bulk;
-import railwaystation.cargo.condition.Dangerous;
-import railwaystation.cargo.condition.Flow;
-import railwaystation.cargo.condition.Freeze;
-import railwaystation.cargo.condition.Gaseus;
-import railwaystation.cargo.condition.Packed;
+import railwaystation.cargo.interfacescondition.Bulk;
+import railwaystation.cargo.interfacescondition.Dangerous;
+import railwaystation.cargo.interfacescondition.Flow;
+import railwaystation.cargo.interfacescondition.Freeze;
+import railwaystation.cargo.interfacescondition.Gaseus;
+import railwaystation.cargo.interfacescondition.Packed;
 
 public abstract class CommodityCargo extends Cargo{
     private String typeOfCargo;

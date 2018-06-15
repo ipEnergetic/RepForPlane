@@ -1,8 +1,8 @@
 package railwaystation.cargo.food;
 
 import railwaystation.cargo.CommodityCargo;
-import railwaystation.cargo.condition.Flow;
-import railwaystation.cargo.condition.Food;
+import railwaystation.cargo.interfacescondition.Flow;
+import railwaystation.cargo.interfacescondition.Food;
 
 public class WheatFlow extends CommodityCargo implements Food, Flow{
 

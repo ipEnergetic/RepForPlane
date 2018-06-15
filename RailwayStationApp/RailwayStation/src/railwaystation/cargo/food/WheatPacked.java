@@ -1,8 +1,8 @@
 package railwaystation.cargo.food;
 
 import railwaystation.cargo.CommodityCargo;
-import railwaystation.cargo.condition.Food;
-import railwaystation.cargo.condition.Packed;
+import railwaystation.cargo.interfacescondition.Food;
+import railwaystation.cargo.interfacescondition.Packed;
 
 public class WheatPacked extends CommodityCargo implements Food, Packed {
     

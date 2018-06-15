@@ -2,13 +2,14 @@ package railwaystation.drivingplatforms.wagons;
 
 import railwaystation.drivingplatforms.DrivingPlatform;
 
-public abstract class Wagon extends DrivingPlatform{
+public abstract class Wagon extends DrivingPlatform {
     private String typeWagon;
+    private int capacity;
     private int weightWagon;
     private int lengthWagon;
     private int valume;
 
-    public abstract void getShipWagon();      //Загружать вагон
+    public abstract void getShipWagon(); //Загружать вагон
 
 
     public void setTypeWagon(String typeWagon) {
@@ -41,5 +42,13 @@ public abstract class Wagon extends DrivingPlatform{
 
     public int getValume() {
         return valume;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
+    public int getCapacity() {
+        return capacity;
     }
 }

@@ -13,7 +13,7 @@ import railwaystation.drivingplatforms.locomotives.Loco;
 import railwaystation.drivingplatforms.wagons.GroupOfWagons;
 import railwaystation.drivingplatforms.wagons.Wagon;
 
-public class BlockTrainManager {
+public class BlockTrainManager extends Manager{
     private ArrayList<DrivingPlatform> blockTrainList;
     private ArrayList<Loco> listLoco;
     private ArrayList<Wagon> wagonsList;

@@ -3,8 +3,8 @@ package railwaystation.cargo.food;
 import railwaystation.administration.direction.interfaces.DeliverFood;
 
 import railwaystation.cargo.CommodityCargo;
-import railwaystation.cargo.condition.Food;
-import railwaystation.cargo.condition.Packed;
+import railwaystation.cargo.interfacescondition.Food;
+import railwaystation.cargo.interfacescondition.Packed;
 
 public class Meat extends CommodityCargo implements Packed, Food{
 

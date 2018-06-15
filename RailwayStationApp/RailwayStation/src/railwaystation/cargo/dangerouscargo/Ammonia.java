@@ -3,8 +3,8 @@ package railwaystation.cargo.dangerouscargo;
 import railwaystation.administration.direction.interfaces.DeliverAmmonia;
 
 import railwaystation.cargo.CommodityCargo;
-import railwaystation.cargo.condition.Dangerous;
-import railwaystation.cargo.condition.Gaseus;
+import railwaystation.cargo.interfacescondition.Dangerous;
+import railwaystation.cargo.interfacescondition.Gaseus;
 
 
 public class Ammonia extends CommodityCargo implements Gaseus, Dangerous, DeliverAmmonia{

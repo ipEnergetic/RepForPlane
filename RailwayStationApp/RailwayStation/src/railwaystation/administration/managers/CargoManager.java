@@ -21,7 +21,7 @@ import railwaystation.cargo.industrialcargo.Wood;
 import railwaystation.administration.direction.Direction;
 
 
-public class CargoManager extends Manager {
+public class CargoManager extends Manager{
     private ArrayList<CommodityCargo> listCargo;
     private Direction directionOfDelivery;
     private int totalWeightCargo;
@@ -33,7 +33,6 @@ public class CargoManager extends Manager {
             totalWeightCargo = totalWeightCargo + listCargo.get(i).getWeightOfCargo();
         }
     }
-
 
     public void genTypeCargo() {
         listCargo = new ArrayList<CommodityCargo>();

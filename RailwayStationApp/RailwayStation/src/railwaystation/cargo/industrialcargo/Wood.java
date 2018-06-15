@@ -3,7 +3,7 @@ package railwaystation.cargo.industrialcargo;
 import railwaystation.administration.direction.interfaces.DeliverWood;
 
 import railwaystation.cargo.CommodityCargo;
-import railwaystation.cargo.condition.IndustrialCargo;
+import railwaystation.cargo.interfacescondition.IndustrialCargo;
 
 public class Wood extends CommodityCargo implements IndustrialCargo {
 
