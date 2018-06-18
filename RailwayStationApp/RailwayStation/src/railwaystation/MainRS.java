@@ -1,23 +1,22 @@
 package railwaystation;
 
 import railwaystation.administration.Dispatcher;
-import railwaystation.administration.managers.BlockTrainManager;
-import railwaystation.administration.managers.CommodityWagonManager;
-import railwaystation.administration.managers.CargoManager;
-import railwaystation.administration.managers.LocoManager;
-import railwaystation.administration.managers.PassManager;
 
-import railwaystation.administration.managers.PassWagonManager;
+import railwaystation.deliveries.CommodityDelivery;
+import railwaystation.deliveries.PassDelivery;
 
-import railwaystation.drivingplatforms.locomotives.electro.ElectroLoco;
-import railwaystation.drivingplatforms.locomotives.electro.LocoEl3000;
 
 public class MainRS {
     public static void main(String[] args) {
-
-        Dispatcher dispatcher1 = new Dispatcher();
-        dispatcher1.createPassengerBlockTrain();
-//        dispatcher1.createCommodityBlockTrain();
+        Dispatcher dispatcher = new Dispatcher();
+        dispatcher.createPassBlocktrain(new PassDelivery());
+        dispatcher.createCommodityBlocktrain(new CommodityDelivery());
+        dispatcher.printPassBlockTrainAndDelivery(1); 
+        dispatcher.printCommodityBlockTrainAndDelivery(1);
+        dispatcher.connectBlockTrain(dispatcher.getListCommodityBlockTrain().get(0).getListBlockTrain());
+        System.out.println(dispatcher.getListCommodityBlockTrain().get(0).getListWagons().get(0).getFilledVolume());
+        dispatcher.shippedWagons(dispatcher.getListCommodityBlockTrain().get(0).getListWagons());
+        System.out.println(dispatcher.getListCommodityBlockTrain().get(0).getListWagons().get(0).getFilledVolume());
 
     }
 }

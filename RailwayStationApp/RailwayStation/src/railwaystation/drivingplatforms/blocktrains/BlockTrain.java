@@ -2,23 +2,21 @@ package railwaystation.drivingplatforms.blocktrains;
 
 import java.util.ArrayList;
 
-public class BlockTrain {
+import railwaystation.drivingplatforms.DrivingPlatform;
+
+public class BlockTrain extends DrivingPlatform{
     private String typeOfFuel;
     private String typeOfRegionFollowing;
-    private String typeSpeedOfFollowing;
     private String pointOfDestination;
-    private double LengthOfBlockTrain;
-    private double maxLengthOfBlockTrain;
-    private double weightOfBlockTrain;
-    private double maxWeightOfBlockTrain;
-    ArrayList<BlockTrain> listBlockTrain;
+    private int LengthOfBlockTrain;
+    private int weightOfBlockTrain;
+    private ArrayList<DrivingPlatform> listBlockTrain;
 
-
-    public void setTypeOfTransportation(String typeOfTransportation) {
-        this.typeOfFuel = typeOfTransportation;
+    public void setTypeOfFuel(String typeOfFuel) {
+        this.typeOfFuel = typeOfFuel;
     }
 
-    public String getTypeOfTransportation() {
+    public String getTypeOfFuel() {
         return typeOfFuel;
     }
 
@@ -30,14 +28,6 @@ public class BlockTrain {
         return typeOfRegionFollowing;
     }
 
-    public void setTypeSpeedOfFollowing(String typeSpeedOfFollowing) {
-        this.typeSpeedOfFollowing = typeSpeedOfFollowing;
-    }
-
-    public String getTypeSpeedOfFollowing() {
-        return typeSpeedOfFollowing;
-    }
-
     public void setPointOfDestination(String pointOfDestination) {
         this.pointOfDestination = pointOfDestination;
     }
@@ -46,43 +36,27 @@ public class BlockTrain {
         return pointOfDestination;
     }
 
-    public void setLengthOfBlockTrain(double LengthOfBlockTrain) {
+    public void setLengthOfBlockTrain(int LengthOfBlockTrain) {
         this.LengthOfBlockTrain = LengthOfBlockTrain;
     }
 
-    public double getLengthOfBlockTrain() {
+    public int getLengthOfBlockTrain() {
         return LengthOfBlockTrain;
     }
 
-    public void setMaxLengthOfBlockTrain(double maxLengthOfBlockTrain) {
-        this.maxLengthOfBlockTrain = maxLengthOfBlockTrain;
-    }
-
-    public double getMaxLengthOfBlockTrain() {
-        return maxLengthOfBlockTrain;
-    }
-
-    public void setWeightOfBlockTrain(double weightOfBlockTrain) {
+    public void setWeightOfBlockTrain(int weightOfBlockTrain) {
         this.weightOfBlockTrain = weightOfBlockTrain;
     }
 
-    public double getWeightOfBlockTrain() {
+    public int getWeightOfBlockTrain() {
         return weightOfBlockTrain;
     }
 
-    public void setMaxWeightOfBlockTrain(double maxWeightOfBlockTrain) {
-        this.maxWeightOfBlockTrain = maxWeightOfBlockTrain;
-    }
-
-    public double getMaxWeightOfBlockTrain() {
-        return maxWeightOfBlockTrain;
-    }
-
-    public void setListBlockTrain(ArrayList<BlockTrain> listBlockTrain) {
+    public void setListBlockTrain(ArrayList<DrivingPlatform> listBlockTrain) {
         this.listBlockTrain = listBlockTrain;
     }
 
-    public ArrayList<BlockTrain> getListBlockTrain() {
+    public ArrayList<DrivingPlatform> getListBlockTrain() {
         return listBlockTrain;
     }
 }
